@@ -1,0 +1,71 @@
+:root {
+    --azul-escuro: #190061;
+    --azul: #240090;
+    --azul-claro: #3500d3;
+    --preto: #282828;
+    --branco: #FFFFFF;
+    --cinza-claro: #F0F0F0;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--azul-claro);
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#pedra {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+#papel {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+#tesoura {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+}
+
+#resultado {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid var(--azul-claro);
+    border-radius: 5px;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+}
+i{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cinza-claro);
+    transition: color 0.3s ease;
+}
+i:hover {
+    color: #3500d3;
+}

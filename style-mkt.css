@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    color: var(--preto);
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+:root {
+    --azul-escurao: #0C0032;
+    --azul-escuro: #190061;
+    --azul: #240090;
+    --azul-claro: #3500d3;
+    --preto: #282828;
+    --branco: #FFFFFF;
+    --cinza-claro: #F0F0F0;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: var(--azul-escurao);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 500px;
+}
+
+.menu li {
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--azul-claro);
+    color: #ffffff;
+}
+
+.conteudo-principal {
+    background: rgb(12,0,51);
+background: linear-gradient(90deg, rgba(12,0,51,1) 0%, rgba(9,9,121,1) 33%, rgba(109,125,236,1) 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header i {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cinza-claro);
+    transition: color 0.3s ease;
+}
+
+header i:hover {
+    color: #3500d3;
+}
+
+.introducao, .bloco-principal {
+    background-color: #e8eaf6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introducao img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.bloco-principal h2, .bloco-principal h3 {
+    color: var(--azul-claro);
+    margin-bottom: 10px;
+}
+
+.bloco-principal p {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .conteudo-principal {
+        padding: 20px;
+    }
+
+    header i.fa-bars {
+        display: block;
+    }
+}
+img{
+    max-height: 100%;
+}
+h1{
+    color:var(--azul);
+    margin-bottom: 10px;
+    font-size: 30px;
+}
